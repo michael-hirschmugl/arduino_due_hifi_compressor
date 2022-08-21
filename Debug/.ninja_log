@@ -13,3 +13,15 @@
 485	783	6827976778813376	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Exe/hifi_compressor.out	dd0886df658be645
 2	138	6827977457074771	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_dma.o	8f70e3f957f07df9
 142	323	6827977457845424	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Exe/hifi_compressor.out	dd0886df658be645
+6	199	6827987777098507	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/cstartup_M_cpp.o	3a5af43513b0ca5a
+11	283	6827987777998013	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_din.o	19127a72d4a824aa
+1	294	6827987777998013	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_setup.o	d5f99791dee21b04
+204	305	6827987778078030	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_wdt.o	e54939f10e0e38cd
+8	331	6827987778158033	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/main.o	756e4b3ddc0f6b5e
+14	357	6827987778653489	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_adc.o	cd0f878587570b22
+25	413	6827987779227030	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_twi.o	8ce0ac267521c893
+17	419	6827987779227030	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/wm8731_com.o	b0b5c190e323da3e
+289	439	6827987779534174	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_ssc.o	ca584bf9cb50fae7
+21	445	6827987779514106	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/sam3x8e_dma.o	eaf44d38a7a6475
+300	477	6827987779929513	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Obj/wm8731_config.o	7e8fdc01867c738a
+481	634	6827987780723119	C:/Users/u15q86/Desktop/hifi_compressor/arduino_due_hifi_compressor/Debug/Exe/hifi_compressor.out	8c36af406c015e75
