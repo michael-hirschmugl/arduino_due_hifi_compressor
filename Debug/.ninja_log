@@ -1,0 +1,15 @@
+# ninja log v5
+7	236	6827976773810164	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/main.o	cb28731a96865791
+0	245	6827976773810164	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/cstartup_M_cpp.o	3096a561a09e85d8
+4	275	6827976774122671	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_adc.o	c5d59bd3b215a58
+14	341	6827976774903992	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_wdt.o	60c3b0fea286e49e
+10	347	6827976774903992	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_din.o	2ce0fa98ec7c457a
+17	374	6827976775216514	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/wm8731_com.o	b0ce5bed12a9eb78
+250	396	6827976775529022	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_twi.o	3f4b3cb5a1b52142
+241	421	6827976775685289	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_setup.o	eae7d7eb2d9bc796
+21	456	6827976775997817	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_ssc.o	c6cbc2b49a52d680
+280	477	6827976776310477	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/wm8731_config.o	ea4093a7fae6a443
+27	481	6827976776310477	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_dma.o	8f70e3f957f07df9
+485	783	6827976778813376	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Exe/hifi_compressor.out	dd0886df658be645
+2	138	6827977457074771	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Obj/sam3x8e_dma.o	8f70e3f957f07df9
+142	323	6827977457845424	C:/Users/u15q86/Desktop/hifi_compressor/Debug/Exe/hifi_compressor.out	dd0886df658be645

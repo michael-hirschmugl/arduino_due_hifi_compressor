@@ -1,0 +1,153 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\cstartup_M_cpp.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\cstartup_M_cpp.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\main.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\main.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_adc.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_adc.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_din.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_din.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_dma.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_dma.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_setup.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_setup.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_ssc.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_ssc.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_twi.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_twi.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_wdt.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_wdt.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\wm8731_com.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\wm8731_com.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\wm8731_config.cpp -xcl_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.xcl -macro_file C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\wm8731_config.cpp -o C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\Obj\ --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --libc++ -Ohs --c++ --no_exceptions --no_rtti --predef_macros C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.tmp
+  rspfile_name = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.xcl.rsp
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\cstartup_M_cpp.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\main.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_adc.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_din.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_dma.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_setup.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_ssc.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_twi.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\sam3x8e_wdt.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\wm8731_com.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.pbi : INDEXER C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.xcl |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\src\wm8731_config.cpp
+  flags = -out=C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.pbi -f C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.xcl
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor.pbw : MAKEBROWSE C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor.pbd
+  flags = C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor.pbd -output C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor.pbw
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part0.pbi : PDBLINK C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.pbi |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.pbi $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.pbi
+  flags = -M C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part0.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\cstartup_M_cpp.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\main.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_adc.pbi
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part1.pbi : PDBLINK C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.pbi |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.pbi $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.pbi
+  flags = -M C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part1.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_din.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_dma.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_setup.pbi
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part2.pbi : PDBLINK C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.pbi |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.pbi $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.pbi
+  flags = -M C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part2.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_ssc.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_twi.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\sam3x8e_wdt.pbi
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part3.pbi : PDBLINK C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.pbi |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.pbi
+  flags = -M C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part3.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_com.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\wm8731_config.pbi
+
+build C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor.pbd : PDBLINK C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part0.pbi |  $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part1.pbi $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part2.pbi $
+C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part3.pbi
+  flags = -M C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor.pbd C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part0.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part1.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part2.pbi C$:\Users\u15q86\Desktop\hifi_compressor\arduino_due_hifi_compressor\Debug\BrowseInfo\hifi_compressor_part3.pbi
+
